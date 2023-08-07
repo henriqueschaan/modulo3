@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados Salvos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome Completo</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+                <th>CPF</th>
+            </tr>
+        </thead>
+        <tbody id="dataTable"></tbody>
+    </table>
+
+    <script>
+        const dataList = JSON.parse(localStorage.getItem('dataList')) || [];
+        const dataTable = document.getElementById('dataTable');
+
+        dataList.forEach(data => {
+            const row = dataTable.insertRow();
+            row.insertCell(0).textContent = data.nome;
+            row.insertCell(1).textContent = data.email;
+            row.insertCell(2).textContent = data.telefone;
+            row.insertCell(3).textContent = data.cpf;
+        });
+    </script>
+</body>
+</html>
