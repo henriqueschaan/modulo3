@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS Cards</title>
+    <style>
+        .card {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="title">Título:</label>
+        <input type="text" id="title">
+        <label for="date">Data:</label>
+        <input type="date" id="date">
+        <label for="description">Descrição:</label>
+        <textarea id="description"></textarea>
+        <button id="add-card">Adicionar Card</button>
+    </div>
+    <div id="cards-container"></div>
+    <div id="card-count">Total de cards: 0</div>
+    <script src="./dist/index.js"></script>
+</body>
+</html>
